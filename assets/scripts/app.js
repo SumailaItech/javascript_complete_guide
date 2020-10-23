@@ -1,1 +1,1 @@
-alert("Hello")
+let currentResult = 0;
