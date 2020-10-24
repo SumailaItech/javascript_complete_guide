@@ -2,7 +2,7 @@
 
 const defaultResult = 0;
 let currentResult = defaultResult;
-
+let logEntries = [];
 //Gets input from input fields
 function getUserNumberInput(){
     return parseInt(userInput.value);
@@ -19,6 +19,8 @@ function addNumber(){
     const initialResult = currentResult; 
     currentResult += enteredNumber;
     createAndWriteOutput('+',initialResult,enteredNumber);
+    logEntries.push(enteredNumber);
+    console.log(logEntries);
     
 }
 
@@ -29,7 +31,7 @@ function subtract(){
     createAndWriteOutput('-',initialResult,enteredNumber);
 }
 
-function multiple(){
+function multiply(){
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
     currentResult *= enteredNumber;
@@ -46,6 +48,6 @@ function divide(){
 
 addBtn.addEventListener('click', addNumber)
 subtractBtn.addEventListener('click',subtract);
-multiplyBtn.addEventListener('click',multiple);
+multiplyBtn.addEventListener('click',multiply);
 divideBtn.addEventListener('click',divide);
 
