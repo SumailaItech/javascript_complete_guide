@@ -3,15 +3,10 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
-function addNumber(num1, num2){
-    const result = num1 + num2;
-    return result;
+function addNumber(){
+    currentResult = currentResult + userInput.value;
+    outputResult(currentResult, ''); 
 }
 
-currentResult = addNumber(20,10);
+addBtn.addEventListener('click', addNumber)
 
-let calculationDescription = `( ${defaultResult} + 10) * 3 /2 -1`;
-let errorMessage = "An error has occur";
-
-
-outputResult(currentResult, errorMessage); 
